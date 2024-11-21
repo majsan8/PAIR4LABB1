@@ -7,7 +7,6 @@
             Console.WriteLine("Hello, World!");
             Console.WriteLine("HEJ");
             Console.WriteLine("Tjafan");
-            
         }
     }
 }
