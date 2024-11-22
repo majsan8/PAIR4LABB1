@@ -23,15 +23,20 @@ namespace PAIR4LABB1
 
             int choice = Int32.Parse(userInput);
 
-            int hours = 7;
-            double minutes = 0.25;
+            int travelHour = 7;
+            int travelMinutes1 = 25;
             int timeDifference = 6;
 
-            double departureTime1 = 14.03;
-            double departureTime2 = 10.10;
+            int departureTimeHour1 = 14;
+            int departureTimeMinute1 = 3;
+            string departureTimeMinute = departureTimeMinute1.ToString("00");
+            int departureTimeHour2 = 10;
+            int departureTimeMinute2 = 10;
 
-            double arrivalTime1 = departureTime1 + hours + minutes - timeDifference;
-            double arrivalTime2 = departureTime2 + hours + minutes + timeDifference;
+
+            string departureTime1 = ($"{departureTimeHour1}:{departureTimeMinute}");
+            string arrivalTime1 = ($"{departureTimeHour1 + travelHour - timeDifference}:{departureTimeMinute1 + travelMinutes1}");
+
 
             Console.WriteLine("**********************************************************************\n");
 
@@ -44,8 +49,8 @@ namespace PAIR4LABB1
 
             else if (choice == 2)
             {
-                Console.WriteLine($"Avgångstid från New York:" + departureTime2);
-                Console.WriteLine($"Ankomsttid till Stockholm:" + arrivalTime2);
+                Console.WriteLine($"Avgångstid från New York:");
+                Console.WriteLine($"Ankomsttid till Stockholm:");
             }
 
             else if (choice == 3)
@@ -55,7 +60,7 @@ namespace PAIR4LABB1
             }
 
             else
-            { 
+            {
                 Console.WriteLine("Du har använt ett val som inte är giltigt. Välj: 1, 2 eller 3");
             }
 
@@ -63,6 +68,6 @@ namespace PAIR4LABB1
 
 
         }
-        
+
     }
 }
