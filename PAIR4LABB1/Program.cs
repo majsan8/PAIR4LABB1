@@ -37,20 +37,23 @@ namespace PAIR4LABB1
             string departureTime1 = ($"{departureTimeHour1}:{departureTimeMinute}");
             string arrivalTime1 = ($"{departureTimeHour1 + travelHour - timeDifference}:{departureTimeMinute1 + travelMinutes1}");
 
+            string departureTime2 = ($"{departureTimeHour2}:{departureTimeMinute2}");
+            string arrivalTime2 = ($"{departureTimeHour2 + travelHour + timeDifference}:{departureTimeMinute2 + travelMinutes1}");
+
 
             Console.WriteLine("**********************************************************************\n");
 
             if (choice == 1)
             {
 
-                Console.WriteLine($"Avgångstid från Stockholm:" + departureTime1);
-                Console.WriteLine($"Ankomsttid till New York:" + arrivalTime1);
+                Console.WriteLine($"Avgångstid från Stockholm:" + " " + departureTime1);
+                Console.WriteLine($"Ankomsttid till New York:" + " " + arrivalTime1);
             }
 
             else if (choice == 2)
             {
-                Console.WriteLine($"Avgångstid från New York:");
-                Console.WriteLine($"Ankomsttid till Stockholm:");
+                Console.WriteLine($"Avgångstid från New York:" + " " + departureTime2);
+                Console.WriteLine($"Ankomsttid till Stockholm:" + " "  + arrivalTime2);
             }
 
             else if (choice == 3)
@@ -65,6 +68,8 @@ namespace PAIR4LABB1
             }
 
             Console.WriteLine("\n**************************************************************************");
+
+            Console.WriteLine("\nTack för att du använde Flygtidsberäknaren! Nu stängs programmet ner.");
 
 
         }
